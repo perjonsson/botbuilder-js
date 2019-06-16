@@ -1,4 +1,10 @@
-//(new Function('require', 'if (!this.hasOwnProperty("FormData")) { this.FormData = require("form-data"); }; if (!this.hasOwnProperty("fetch")) { this.fetch = require("node-fetch"); }'))(require);
+if (!this.hasOwnProperty("FormData")) {
+  this.FormData = require("form-data");
+}
+
+if (!this.hasOwnProperty("fetch")) {
+  this.fetch = require("node-fetch");
+}
 
 import { TokenResponse } from './connectorApi/models/mappers';
 
